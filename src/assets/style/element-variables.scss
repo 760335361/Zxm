@@ -1,0 +1,15 @@
+/**如果需要修改其它变量，可以在以下文件中查找
+ * https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss
+ */
+
+// 明确从 node_modules 中 element-plus 的主题目录引入
+@forward 'node_modules/element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': $mainColor,
+    ),
+  ),
+);
+
+@use 'node_modules/element-plus/theme-chalk/src/reset.scss' as *;
+@use 'node_modules/element-plus/theme-chalk/src/index.scss' as *;

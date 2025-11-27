@@ -31,7 +31,7 @@ public class SysUserServiceImpl implements SysUserService {
 
         // 校验验证码是否正确
         String captcha = loginDto.getCaptcha();     // 用户输入的验证码
-        String codeKey = loginDto.getCodeKey();     // redis中验证码的数据key
+        String codeKey = loginDto.getCodeKey();     // redis中验证码的数据key嘎嘎嘎
 
         // 从Redis中获取验证码
         String redisCode = redisTemplate.opsForValue().get("user:login:validatecode:" + codeKey);

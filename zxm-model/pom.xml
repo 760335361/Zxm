@@ -40,5 +40,11 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
+        <!-- Springdoc OpenAPI 核心依赖（提供 SecurityScheme/Component 等类） -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.2.0</version> <!-- 版本建议和 Knife4j 匹配，推荐 2.0+ -->
+        </dependency>
     </dependencies>
 </project>

@@ -27,4 +27,25 @@ public class SysRoleController {
         return Result.build(pageInfo , ResultCodeEnum.SUCCESS) ;
     }
 
+    @Operation(summary = "角色添加")
+    @PostMapping(value = "/saveSysRole")
+    public Result saveSysRole(@RequestBody SysRole SysRole) {
+        sysRoleService.saveSysRole(SysRole) ;
+        return Result.build(null , ResultCodeEnum.SUCCESS) ;
+    }
+
+    @Operation(summary = "角色修改")
+    @PutMapping(value = "/updateSysRole")
+    public Result updateSysRole(@RequestBody SysRole sysRole) {
+        sysRoleService.updateSysRole(sysRole) ;
+        return Result.build(null , ResultCodeEnum.SUCCESS) ;
+    }
+
+    @Operation(summary = "角色删除")
+    @DeleteMapping(value = "/deleteById/{roleId}")
+    public Result deleteById(@PathVariable(value = "roleId") Long roleId) {
+        sysRoleService.deleteById(roleId) ;
+        return Result.build(null , ResultCodeEnum.SUCCESS) ;
+    }
+
 }

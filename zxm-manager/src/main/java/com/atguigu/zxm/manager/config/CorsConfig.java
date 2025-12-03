@@ -26,6 +26,10 @@ public class CorsConfig {
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config); // 所有接口都生效
+        config.addAllowedOriginPattern("https://3e39dedb.r34.cpolar.top"); // 前端公网域名
+        config.addAllowedOriginPattern("http://3e39dedb.r34.cpolar.top");
+        config.addAllowedOriginPattern("http://localhost:3001"); // 本地前端
+        config.addAllowedOriginPattern("http://192.168.1.3:3001");
 
         return new CorsFilter(source);
     }

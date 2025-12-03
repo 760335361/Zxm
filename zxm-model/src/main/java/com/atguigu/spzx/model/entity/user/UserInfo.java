@@ -3,10 +3,12 @@ package com.atguigu.spzx.model.entity.user;
 import com.atguigu.spzx.model.entity.base.BaseEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
+@NoArgsConstructor // 关键，JAX-WS 反射需要无参构造
 @Schema(description = "用户实体类")
 public class UserInfo extends BaseEntity {
 

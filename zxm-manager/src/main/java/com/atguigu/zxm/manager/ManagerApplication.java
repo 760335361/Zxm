@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
-
+//package com.atguigu.zxm.manager;
 @SpringBootApplication
 @ComponentScan(basePackages={"com.atguigu.zxm"})
 @EnableConfigurationProperties(value = {UserProperties.class})

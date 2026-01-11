@@ -22,18 +22,18 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(loginAuthInterceptor)
-                .addPathPatterns("/**") // 拦截所有路径
-                .excludePathPatterns(
-                        // 放行 Knife4j/Springdoc 相关路径
-                        "/doc.html",
-                        "/webjars/**",
-                        "/v3/api-docs/**",
-                        "/swagger-resources/**",
-                        "/v3/api-docs.yaml",
-                        // 放行 IndexController 所有接口（/admin/system/index/** 前缀）
-                        "/admin/system/index/**"
-                );
+//        registry.addInterceptor(loginAuthInterceptor)
+//                .addPathPatterns("/**") // 拦截所有路径
+//                .excludePathPatterns(
+//                        // 放行 Knife4j/Springdoc 相关路径
+//                        "/doc.html",
+//                        "/webjars/**",
+//                        "/v3/api-docs/**",
+//                        "/swagger-resources/**",
+//                        "/v3/api-docs.yaml",
+//                        // 放行 IndexController 所有接口（/admin/system/index/** 前缀）
+//                        "/admin/system/index/**"
+//                );
     }
 
     // 优化跨域配置（避免通配符 * 与 allowCredentials=true 冲突）

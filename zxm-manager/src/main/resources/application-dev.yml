@@ -5,7 +5,7 @@ server:
   port: 8501
 
 
-# 配置数据库连接信息
+# 配置数据库连接信息yourpassword
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
@@ -24,6 +24,21 @@ spring:
 mybatis:
   config-location: classpath:/mybatis-config.xml
   mapper-locations: classpath:/mapper/*/*.xml
+
+# ========== RocketMQ 所有配置 集中管理（全部配置迁移至此） ==========
+rocketmq:
+  # NameServer服务地址（本地/生产统一修改此处）
+  name-server: localhost:9876
+  # 生产者配置（沿用你提供的原版配置）
+  producer:
+    group: zxm-manager-producer
+    send-message-timeout: 30000
+    retry-times-when-send-failed: 2
+  # 消费者配置
+  consumer:
+    group: my-consumer-group
+  # 消息主题（生产者/消费者统一配置，保证一致性）
+  topic: my-topic
 
 spzx:
   auth:
